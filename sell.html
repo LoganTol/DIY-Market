@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Plans | ProPlans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="page-container">
+        <!-- Value Prop Section -->
+        <section class="value-prop hero-compact" style="background-color: var(--bg-dark); color: white; padding: 4rem 2rem; border-radius: var(--radius-md); text-align: center; margin-bottom: 3rem;">
+            <h1 class="c-white" style="margin-bottom: 1rem;">Turn Blueprints into Revenue</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: #ccc;">Keep <strong>90%</strong> of every sale. The best marketplace for contractors and designers.</p>
+        </section>
+
+        <div class="split-layout" style="display: grid; grid-template-columns: 1fr 350px; gap: 3rem;">
+            <!-- Upload Stepper -->
+            <div class="form-container">
+                <h2>Upload New Blueprint</h2>
+                <form id="sellForm" class="stepper-form" style="margin-top: 2rem;" onsubmit="event.preventDefault(); alert('Plan published successfully!')">
+                    
+                    <!-- Step 1: Details -->
+                    <div class="step-card active" id="step1">
+                        <h3>1. Project Details</h3>
+                        <div class="form-group">
+                            <label>Plan Title</label>
+                            <input type="text" placeholder="e.g. Modern 10x10 Lean-to Shed" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea rows="4" placeholder="Describe the materials and instructions..."></textarea>
+                        </div>
+                        <button type="button" class="btn-primary" onclick="nextStep(2)">Next Step</button>
+                    </div>
+
+                    <!-- Step 2: Upload -->
+                    <div class="step-card hidden" id="step2">
+                        <h3>2. Upload Blueprints</h3>
+                        <div class="drag-drop-zone" id="dropZone">
+                            <i class="fa-solid fa-cloud-arrow-up" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <p>Drag & Drop your PDF/PNG files here</p>
+                            <span style="display: block; margin: 1rem 0; color: var(--text-muted);">or</span>
+                            <button type="button" class="btn-secondary">Browse Files</button>
+                            <input type="file" id="fileInput" hidden multiple>
+                        </div>
+                        <div id="fileList" style="margin-top: 1rem; color: var(--text-muted);"></div>
+                        <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                            <button type="button" class="btn-secondary" onclick="nextStep(1)">Back</button>
+                            <button type="button" class="btn-primary" onclick="nextStep(3)">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Pricing -->
+                    <div class="step-card hidden" id="step3">
+                        <h3>3. Pricing & Tags</h3>
+                        <div class="form-group">
+                            <label>Price ($)</label>
+                            <input type="number" placeholder="29.00" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select>
+                                <option>Outdoor</option>
+                                <option>Woodworking</option>
+                                <option>Structures</option>
+                            </select>
+                        </div>
+                        <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                            <button type="button" class="btn-secondary" onclick="nextStep(2)">Back</button>
+                            <button type="submit" class="btn-primary">Publish Plan</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Dashboard Preview -->
+            <aside class="dashboard-preview">
+                <div class="dashboard-card" style="background: var(--bg-alt); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-muted);">Potential Earnings Calculator</h3>
+                    <div style="font-size: 2.5rem; font-family: var(--font-heading); color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">$2,450</div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2rem;">Estimated monthly revenue with 3 active plans.</p>
+                    
+                    <div class="chart-mockup" style="display: flex; align-items: flex-end; gap: 0.5rem; height: 100px; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">
+                        <div style="flex: 1; background: var(--border-color); height: 20%; border-radius: 2px;"></div>
+                        <div style="flex: 1; background: var(--border-color); height: 40%; border-radius: 2px;"></div>
+                        <div style="flex: 1; background: var(--primary-light); height: 65%; border-radius: 2px;"></div>
+                        <div style="flex: 1; background: var(--primary); height: 100%; border-radius: 2px;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">
+                        <span>Wk 1</span>
+                        <span>Wk 2</span>
+                        <span>Wk 3</span>
+                        <span>Wk 4</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="app.js" defer></script>
+</body>
+</html>

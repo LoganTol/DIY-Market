@@ -1,0 +1,41 @@
+[
+  {
+    "id": "plan-1",
+    "title": "12x16 Multi-Level Deck",
+    "price": 29,
+    "author": "Mike Builds",
+    "category": "Outdoor",
+    "imagePath": "assets/deck_plan.png",
+    "rating": "4.9",
+    "reviews": 124,
+    "format": "PDF + Cut List",
+    "dimensions": "12' x 16'",
+    "materials": ["Pressure treated wood", "Deck screws", "Concrete footings", "Joist hangers"]
+  },
+  {
+    "id": "plan-2",
+    "title": "Built-in Library Shelving",
+    "price": 15,
+    "author": "ArtisanCraft",
+    "category": "Woodworking",
+    "imagePath": "assets/bookshelf_plan.png",
+    "rating": "4.8",
+    "reviews": 89,
+    "format": "PDF Only",
+    "dimensions": "8' x 10' Wall",
+    "materials": ["Birch Plywood", "Wood glue", "Edge banding", "1x2 Poplar trim"]
+  },
+  {
+    "id": "plan-3",
+    "title": "Modern 10x10 Lean-to Shed",
+    "price": 45,
+    "author": "Summit Contracting",
+    "category": "Structures",
+    "imagePath": "assets/shed_plan.png",
+    "rating": "5.0",
+    "reviews": 210,
+    "format": "3D Model + PDF",
+    "dimensions": "10' x 10'",
+    "materials": ["2x4 Framing lumber", "LP SmartSide", "Roofing felt", "Asphalt Shingles", "Galvanized nails"]
+  }
+]

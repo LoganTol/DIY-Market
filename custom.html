@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Custom Plan | ProPlans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="page-container" style="max-width: 800px; margin-inline: auto;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="margin-bottom: 1rem;">Need Something Specific?</h1>
+            <p style="color: var(--text-muted); font-size: 1.1rem;">Commission exactly what you need. Our network of pros will draft a custom plan for your unique space.</p>
+        </div>
+
+        <div class="form-container" style="background: var(--bg-alt); padding: 3rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <form id="customForm">
+                <div id="formFields">
+                    <div class="form-group">
+                        <label>Project Type</label>
+                        <select required>
+                            <option value="">Select a type...</option>
+                            <option>Deck / Patio</option>
+                            <option>Custom Furniture</option>
+                            <option>Room Addition</option>
+                            <option>Workshop / Shed</option>
+                        </select>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label>Estimated Budget ($)</label>
+                            <input type="number" placeholder="5000" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Dimensions (LxW)</label>
+                            <input type="text" placeholder="e.g. 15' x 20'" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Site Photos</label>
+                        <input type="file" multiple class="file-uploader" style="background: white; padding: 1rem; border: 1px dashed var(--border-color); border-radius: var(--radius-sm); width: 100%;">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Additional Details</label>
+                        <textarea rows="5" placeholder="Tell us about constraints, materials, or style preferences..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-large" style="width: 100%; margin-top: 1rem;">Find My Pro</button>
+                </div>
+            </form>
+
+            <!-- Loading State Simulation -->
+            <div id="matchLoading" class="hidden" style="text-align: center; padding: 3rem 0;">
+                <i class="fa-solid fa-compass fa-spin" style="font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                <h3 style="margin-bottom: 0.5rem;">Finding local contractors...</h3>
+                <p style="color: var(--text-muted);">Scanning the ProPlans network for your perfect match.</p>
+            </div>
+            
+            <div id="matchSuccess" class="hidden" style="text-align: center; padding: 3rem 0;">
+                <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10B981; margin-bottom: 1.5rem;"></i>
+                <h3 style="margin-bottom: 0.5rem;">Request Submitted!</h3>
+                <p style="color: var(--text-muted);">You should expect quotes in your inbox within 24 hours.</p>
+                <div style="margin-top: 2rem;">
+                    <a href="index.html" class="btn-secondary">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="app.js" defer></script>
+</body>
+</html>

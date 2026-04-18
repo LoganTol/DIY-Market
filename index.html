@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPlans | The Blueprint Marketplace</title>
+    <meta name="description" content="Buy and sell detailed home project plans. Join the community of contractors and handy people.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Component Anchor -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="hero-badge">The #1 Marketplace for Builders</span>
+            <h1>Build it Right.<br>With Plans from the Pros.</h1>
+            <p>Access hundreds of detailed, professional project plans, or monetize your own expertise by selling blueprints to homeowners and DIYers.</p>
+            <div class="hero-buttons">
+                <a href="explore.html" class="btn-primary btn-large">Browse Plans</a>
+                <a href="sell.html" class="btn-secondary btn-large">Become a Creator</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Everything you need to build.</h2>
+                <p>Whether you're looking for the perfect deck plan, or you're a seasoned contractor wanting to sell your designs, ProPlans has you covered.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-scroll"></i></div>
+                    <h3>Ready-to-Build Plans</h3>
+                    <p>Instant access to high-quality schematics, material lists, and step-by-step instructions from verified contractors.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h3>Commission Custom Work</h3>
+                    <p>Can't find exactly what you need? Make an offer to our community of experts to draft a custom plan just for your space.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shop"></i></div>
+                    <h3>Monetize Your Expertise</h3>
+                    <p>Turn your past project plans into passive income. Set your price and sell directly to thousands of ready-to-build homeowners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Plans -->
+    <section class="trending" id="explore">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Trending Projects</h2>
+                <a href="explore.html" class="view-all">View All Plans <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="filter-bar">
+                <input type="text" id="searchInput" placeholder="Search projects or builders...">
+                <select id="categoryFilter">
+                    <option value="All">All Categories</option>
+                    <option value="Outdoor">Outdoor</option>
+                    <option value="Woodworking">Woodworking</option>
+                    <option value="Structures">Structures</option>
+                </select>
+            </div>
+
+            <div class="plans-grid">
+                <!-- Dynamically populated via app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Anchor -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Modal -->
+    <div id="plan-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div id="modal-image" class="modal-image-preview"></div>
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p><strong>Dimensions:</strong> <span id="modal-dimensions"></span></p>
+                    <h3>Material List</h3>
+                    <ul id="modal-materials-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
